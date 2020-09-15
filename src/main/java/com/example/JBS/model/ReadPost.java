@@ -23,16 +23,15 @@ public class ReadPost {
         return conn;
     }
 
-    public void createItem(String brand, String company, String reason, String pd, String url, String date, int id) {
+    public void createItem(String brand, String company, String reason, String pd, String url, String date) {
         try {
-            PreparedStatement st = connect().prepareStatement("INSERT INTO recall (id, brand, company, reason, pd, url, date) VALUES (?, ?, ?, ?, ?, ?, ?)");
-            st.setInt(1, id);
-            st.setString(2, brand);
-            st.setString(3, company);
-            st.setString(4, reason);
-            st.setString(5, pd);
-            st.setString(6, url);
-            st.setString(7, date);
+            PreparedStatement st = connect().prepareStatement("INSERT INTO recall (brand, company, reason, pd, url, date) VALUES (?, ?, ?, ?, ?, ?)");
+            st.setString(1, brand);
+            st.setString(2, company);
+            st.setString(3, reason);
+            st.setString(4, pd);
+            st.setString(5, url);
+            st.setString(6, date);
             st.executeUpdate();
             st.close();
 
