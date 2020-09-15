@@ -8,16 +8,14 @@ public class Recall {
     private String pd;
     private String url;
     private String date;
-    private Integer id;
 
-    public Recall(String brand, String company, String reason, String pd, String url, String date, Integer id) {
+    public Recall(String brand, String company, String reason, String pd, String url, String date) {
         this.brand = brand;
         this.company = company;
         this.reason = reason;
         this.pd = pd;
         this.url = url;
         this.date = date;
-        this.id = id;
     }
 
     public Recall() {
@@ -70,13 +68,5 @@ public class Recall {
 
     public String getDate() {
         return date;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
     }
 }
