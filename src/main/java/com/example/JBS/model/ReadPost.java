@@ -7,8 +7,8 @@ import java.util.UUID;
 public class ReadPost {
 
     private final String url = "jdbc:postgresql://localhost:5432/recall";
-    private final String user = "postgres";
-    private final String password = "admin";
+    private final String user = "****";
+    private final String password = "****";
 
     public Connection connect() {
         Connection conn = null;
