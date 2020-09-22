@@ -47,7 +47,7 @@ public class ReadPost {
         List<Recall> tasks = XMLUtil.retrieveXMLData();
         for(Recall task: tasks) {
             if (task != null) {
-                database.createItem(task.getBrand().trim(), task.getCompany().trim(), task.getReason().trim(), task.getPd().trim(), task.getUrl().trim(), task.getDate().trim(), 0);
+                database.createItem(task.getBrand().trim(), task.getCompany().trim(), task.getReason().trim(), task.getPd().trim(), task.getUrl().trim(), task.getDate().trim());
             }
         }
     }
